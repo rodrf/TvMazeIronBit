@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/background"
+    tools:context=".ui.view.DetailActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLeft"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideBottomRight"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".65" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideBottomLeft"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".8" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvGenders"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideLeft"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivMovie">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|start"
+            android:orientation="vertical"
+            android:background="@color/background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guideLeft"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivMovie">
+
+            <LinearLayout
+                android:id="@+id/linearGenders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@id/guideLeft"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivMovie">
+
+                <TextView
+                    android:id="@+id/tvGenderTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Genders: "
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvGenders"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    tools:text="Comedy, Children" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvSchedule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linearGenders"
+                tools:text="Horario: 00:37 | Monday, Tuesday, Wednesday" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+    <ProgressBar
+        android:id="@+id/progressImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/ivMovie"
+        app:layout_constraintEnd_toEndOf="@id/ivMovie"
+        app:layout_constraintStart_toStartOf="@id/ivMovie"
+        app:layout_constraintTop_toTopOf="@id/ivMovie" />
+
+
+    <ImageView
+        android:id="@+id/ivMovie"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@id/guideBottomLeft"
+        app:layout_constraintEnd_toEndOf="@id/guideLeft"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvSynopsis"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:animateLayoutChanges="true"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="@id/guideBottomRight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideLeft"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:background="@color/item_movie"
+            android:padding="10dp">
+            <Button
+                android:id="@+id/btnEnlace"
+                android:layout_width="180dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="15dp"
+                android:text="Visit website"
+                android:foregroundTint="@color/white"
+                android:src="@drawable/ic_internet"
+                android:tint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle"/>
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Maniac" />
+
+            <TextView
+                android:id="@+id/tvNetName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                tools:text="Nickelodeon" />
+
+            <LinearLayout
+                android:id="@+id/linearStar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNetName">
+
+                <TextView
+                    android:id="@+id/tvRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                    tools:text="9.5" />
+
+                <ImageView
+                    android:id="@+id/ivStar"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_star" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvSynopsisTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Synopsis: "
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linearStar" />
+
+            <TextView
+                android:id="@+id/tvSynopsis"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxLines="5"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSynopsisTitle"
+                tools:text="@tools:sample/lorem/random" />
+
+            <TextView
+                android:id="@+id/tvShowMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/show_more"
+                android:textColor="#FFC107"
+                android:textSize="24sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSynopsis" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvAuthor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideLeft"
+        app:layout_constraintTop_toBottomOf="@id/guideBottomRight">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/item_movie"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/tvTalents"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cast"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCast"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTalents"
+                tools:listitem="@layout/item_actors" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

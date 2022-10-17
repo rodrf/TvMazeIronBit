@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list android:opacity="opaque"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@color/background"/>
+    <item
+        android:left="115dp"
+        android:right="115dp"
+        android:top="390dp"
+        android:bottom="390dp">
+        <bitmap android:src="@drawable/tv_maze_logo"/>
+    </item>
+
+</layer-list>

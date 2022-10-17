@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ui.view.DetailFr">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btnEnlace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="-30dp"
+                android:backgroundTint="#2e29de"
+                android:contentDescription="@string/web_site"
+                android:src="@drawable/ic_url"
+                app:layout_constraintBottom_toTopOf="@id/cvSynopsis"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/ivMovie"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="@id/guideTop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/avatars" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvSynopsis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="-35dp"
+                android:layout_marginEnd="10dp"
+                app:cardCornerRadius="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/guideTop">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/item_movie"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Maniac" />
+
+                    <TextView
+                        android:id="@+id/tvNetName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                        tools:text="Nickelodeon" />
+
+                    <LinearLayout
+                        android:id="@+id/linearStar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvNetName">
+
+                        <TextView
+                            android:id="@+id/tvRating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                            tools:text="9.5" />
+
+                        <ImageView
+                            android:id="@+id/ivStar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_star" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvSynopsisTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Synopsis: "
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/linearStar" />
+
+                    <TextView
+                        android:id="@+id/tvSynopsis"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvSynopsisTitle" />
+
+                    <LinearLayout
+                        android:id="@+id/linearGenders"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvSynopsis">
+
+                        <TextView
+                            android:id="@+id/tvGenderTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:text="Genders: " />
+                        <TextView
+                            android:id="@+id/tvGenders"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="Comedy, Children"
+                            android:textColor="@color/white"/>
+
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tvSchedule"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        tools:text="Horario: 00:37 | Monday, Tuesday, Wednesday"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/linearGenders"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvAuthor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                app:cardCornerRadius="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cvSynopsis">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/item_movie"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/tvTalents"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cast"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvTalents"
+                        tools:listitem="@layout/item_actors" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
