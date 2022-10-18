@@ -1,4 +1,4 @@
-package mx.qsistemas.headhunter.dialogs
+package com.universe.tvmaze.ui.dialog
 
 import android.content.Context
 import android.view.Gravity
@@ -9,6 +9,14 @@ import com.airbnb.lottie.LottieDrawable
 import com.universe.tvmaze.R
 import com.universe.tvmaze.core.utils.dpToPx
 
+/**
+ *
+ * @constructor
+ * TODO
+ *
+ * @param context To know where the dialog will be displayed
+ * @param title To set the dialog title
+ */
 class StatusDialog(context: Context, title: String?) :
     BaseDialog(context, R.layout.status_dialog, Gravity.TOP, true) {
 

@@ -17,6 +17,12 @@ import java.time.LocalDateTime
 import java.util.*
 import javax.inject.Inject
 
+/**
+ * TODO
+ *
+ * @property getMoviesByDate use case to get movies by date
+ * @property getMoviesByParam use case to get movies by param
+ */
 @HiltViewModel
 class TvMazeViewModel @Inject constructor(
     private val getMoviesByDate: GetMoviesByDate,

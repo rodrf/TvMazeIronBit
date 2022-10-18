@@ -1,7 +1,7 @@
 package com.universe.tvmaze.core.helpers
 
 import android.content.Context
-import mx.qsistemas.headhunter.dialogs.StatusDialog
+import com.universe.tvmaze.ui.dialog.StatusDialog
 
 object DialogStatusHelper {
     private var dialog: StatusDialog? = null

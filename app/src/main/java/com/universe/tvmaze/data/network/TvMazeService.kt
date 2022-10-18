@@ -7,6 +7,11 @@ import kotlinx.coroutines.withContext
 import java.lang.Exception
 import javax.inject.Inject
 
+/**
+ * TODO
+ *
+ * @property api Inject ApiClient
+ */
 class TvMazeService @Inject constructor(private val api: TvMazeApiClient) {
 
     suspend fun getMoviesByDate(date: String): MutableList<ScheduleItemDomain> {

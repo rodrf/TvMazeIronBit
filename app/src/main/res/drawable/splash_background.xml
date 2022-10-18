@@ -8,7 +8,7 @@
         android:right="115dp"
         android:top="390dp"
         android:bottom="390dp">
-        <bitmap android:src="@drawable/tv_maze_logo"/>
+        <bitmap android:src="@drawable/tv_maze_ico"/>
     </item>
 
 </layer-list>

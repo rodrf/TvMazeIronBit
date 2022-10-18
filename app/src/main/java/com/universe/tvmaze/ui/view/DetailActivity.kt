@@ -22,6 +22,7 @@ import com.universe.tvmaze.ui.view.adapter.detail.DetailCastAdapter
 import com.universe.tvmaze.ui.viewmodel.detail.DetailViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
+
 @AndroidEntryPoint
 class DetailActivity : AppCompatActivity(), OnClickListener {
     private lateinit var binding: ActivityDetailBinding

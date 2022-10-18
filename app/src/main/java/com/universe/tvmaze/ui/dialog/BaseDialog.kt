@@ -1,4 +1,4 @@
-package mx.qsistemas.headhunter.dialogs
+package com.universe.tvmaze.ui.dialog
 
 import android.app.Dialog
 import android.content.Context

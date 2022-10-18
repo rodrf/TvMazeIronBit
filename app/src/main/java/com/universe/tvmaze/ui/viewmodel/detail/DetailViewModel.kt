@@ -12,6 +12,12 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+/**
+ * TODO
+ *
+ * @property getDetailMovie use case to get movie detail
+ * @property getDetailCast use case to get actors
+ */
 @HiltViewModel
 class DetailViewModel @Inject constructor(
     private val getDetailMovie: GetDetailMovie,

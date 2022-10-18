@@ -13,6 +13,11 @@ import com.squareup.picasso.Picasso
 import com.universe.tvmaze.R
 import com.universe.tvmaze.domain.model.DetailCastItemDomain
 
+/**
+ * TODO
+ *
+ * @property cast List of actors by show
+ */
 class DetailCastAdapter(
     private var cast: MutableList<DetailCastItemDomain>
 ) : RecyclerView.Adapter<DetailCastAdapter.ViewHolderCast>(){

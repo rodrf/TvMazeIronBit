@@ -14,6 +14,12 @@ import com.universe.tvmaze.R
 import com.universe.tvmaze.domain.model.ScheduleItemDomain
 
 
+/**
+ *
+ * @property movies movie list, retrieve from API
+ * @property listener to listen when user click on the list
+ * @property isFromDate to know what web service we need to call
+ */
 class TvMazeAdapter(
     private var movies: MutableList<ScheduleItemDomain>,
     private val listener: ITvMazeOnClick,
